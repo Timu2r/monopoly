@@ -1,4 +1,4 @@
-// src/components/AddPlayerForm.jsx
+
 import React, { useState } from 'react';
 
 const AddPlayerForm = ({ onAddPlayer }) => {

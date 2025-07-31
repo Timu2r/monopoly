@@ -1,4 +1,4 @@
-// src/components/PlayerCard.jsx
+
 import React from 'react';
 import { MoneyUtils } from '../utils/MoneyUtils';
 

@@ -1,4 +1,4 @@
-// src/components/RestoreGameDialog.jsx
+
 import React from 'react';
 
 const RestoreGameDialog = ({ onRestore, onNewGame }) => {

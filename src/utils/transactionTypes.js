@@ -1,4 +1,4 @@
-// src/utils/transactionTypes.js
+
 
 export const TRANSACTION_TYPES = {
   PLAYER_ADDED: 'PLAYER_ADDED',

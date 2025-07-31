@@ -1,11 +1,11 @@
-// src/components/TransactionItem.jsx
+
 import React from 'react';
 import { TRANSACTION_TYPES } from '../utils/transactionTypes';
 
 const TransactionItem = ({ transaction }) => {
   const getTypeColor = (type) => {
     switch (type) {
-      case TRANSACTION_TYPES.PLAYER_ADDED: return '#a855f7'; // purple-500
+      case TRANSACTION_TYPES.PLAYER_ADDED: return '#a855f7'; 
       case TRANSACTION_TYPES.FIELD_GAIN: return 'var(--success-color)';
       case TRANSACTION_TYPES.FIELD_LOSS: return 'var(--danger-color)';
       case TRANSACTION_TYPES.PLAYER_TRANSFER: return 'var(--primary-color)';
@@ -16,7 +16,7 @@ const TransactionItem = ({ transaction }) => {
 
   const itemStyle = {
     padding: '0.75rem 1rem',
-    backgroundColor: '#f9fafb', // gray-50
+    backgroundColor: '#f9fafb', 
     borderRadius: '0.5rem',
     borderLeft: `4px solid ${getTypeColor(transaction.type)}`,
     marginBottom: '0.5rem',

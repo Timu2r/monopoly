@@ -1,11 +1,11 @@
-// src/reducers/gameReducer.js
+
+
 import { CONSTANTS } from '../utils/constants';
 import { TRANSACTION_TYPES } from '../utils/transactionTypes';
 import { MoneyUtils } from '../utils/MoneyUtils';
 
 export const gameReducer = (state, action) => {
-  // Очищаем предыдущую ошибку при каждом новом действии,
-  // если только ошибка не связана с этим действием
+  
   const newStateWithoutError = { ...state, error: null };
 
   switch (action.type) {
@@ -89,9 +89,9 @@ export const gameReducer = (state, action) => {
 
       let newTransactions = [transaction, ...state.transactions];
 
-      // Проверка на исключение
+      
       if (newBalance < CONSTANTS.MIN_BALANCE && !player.isEliminated) {
-        updatedPlayer.isEliminated = true; // Обновляем статус игрока для исключения
+        updatedPlayer.isEliminated = true; 
         const eliminationTransaction = {
           id: Date.now() + 1,
           type: TRANSACTION_TYPES.PLAYER_ELIMINATED,
@@ -175,8 +175,8 @@ export const gameReducer = (state, action) => {
 
       let newTransactions = [transaction, ...state.transactions];
 
-      // Проверка на исключение отправителя
-      // Если у отправителя баланс становится меньше минимального после перевода
+      
+      
       if (newFromBalance < CONSTANTS.MIN_BALANCE && !fromPlayer.isEliminated) {
         const eliminationTransaction = {
           id: Date.now() + 1,
@@ -186,7 +186,7 @@ export const gameReducer = (state, action) => {
           playerName: fromPlayer.name
         };
 
-        // Обновляем игрока как исключенного в updatedPlayers
+        
         const finalPlayers = updatedPlayers.map(p =>
           p.id === fromPlayerId ? { ...p, isEliminated: true } : p
         );
@@ -206,10 +206,10 @@ export const gameReducer = (state, action) => {
     }
 
     case 'RESTORE_GAME':
-      return { ...action.payload, error: null }; // Сбрасываем ошибку при восстановлении игры
+      return { ...action.payload, error: null }; 
 
     case 'RESET_GAME':
-      return { players: [], transactions: [], error: null }; // Сбрасываем ошибку при сбросе игры
+      return { players: [], transactions: [], error: null }; 
 
     default:
       return state;

@@ -1,4 +1,4 @@
-/* src/index.css */
+
 *,
 *::before,
 *::after {
@@ -7,7 +7,7 @@
   padding: 0;
 }
 
-/* Custom scrollbar for webkit browsers */
+
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -26,19 +26,19 @@
   background: #555;
 }
 
-/* Responsive typography */
+
 html {
-  font-size: 100%; /* 16px */
+  font-size: 100%; 
 }
 
 @media (max-width: 768px) {
   html {
-    font-size: 93.75%; /* 15px */
+    font-size: 93.75%; 
   }
 }
 
 @media (max-width: 480px) {
   html {
-    font-size: 87.5%; /* 14px */
+    font-size: 87.5%; 
   }
 }

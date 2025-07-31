@@ -1,4 +1,4 @@
-// src/utils/constants.js
+
 
 export const CONSTANTS = {
   STARTING_BALANCE: 2_000, 

@@ -14,7 +14,7 @@ const MonopolyApp = () => {
   const [showRestoreDialog, setShowRestoreDialog] = useState(false);
   const [savedGameState, setSavedGameState] = useState(null);
 
-  // Инициализация и проверка сохраненной игры
+  
   useEffect(() => {
     const savedState = localStorage.getItem(CONSTANTS.STORAGE_KEYS.GAME_STATE);
     if (savedState) {
@@ -30,14 +30,14 @@ const MonopolyApp = () => {
     }
   }, []);
 
-  // Автосохранение при изменении состояния
+  
   useEffect(() => {
     if (gameState.players.length > 0 || gameState.transactions.length > 0) {
       localStorage.setItem(CONSTANTS.STORAGE_KEYS.GAME_STATE, JSON.stringify(gameState));
     }
   }, [gameState]);
 
-  // Обработчики действий
+  
   const handleAddPlayer = (name) => {
     const trimmedName = name.trim();
     if (!trimmedName) {

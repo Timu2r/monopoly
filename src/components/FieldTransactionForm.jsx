@@ -1,4 +1,4 @@
-// src/components/FieldTransactionForm.jsx
+
 import React, { useState } from 'react';
 import { MoneyUtils } from '../utils/MoneyUtils';
 
